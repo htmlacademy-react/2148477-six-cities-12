@@ -1,11 +1,10 @@
-import Header from '../../components/header/header';
-import PlaceCard from '../../components/place-card/place-card';
+import Layout from '../../components/layout/layout';
+// import PlaceCard from '../../components/place-card/place-card';
+// import { getOfferById } from '../../mocks/offers';
 
 export default function Room(): JSX.Element {
   return (
-    <div className="page">
-      <Header />
-
+    <Layout isHeaderNav>
       <main className="page__main page__main--property">
         <section className="property">
           <div className="property__gallery-container container">
@@ -206,13 +205,13 @@ export default function Room(): JSX.Element {
           <section className="near-places places">
             <h2 className="near-places__title">Other places in the neighbourhood</h2>
             <div className="near-places__list places__list">
-              <PlaceCard />
-              <PlaceCard />
-              <PlaceCard />
+              {/* <PlaceCard offer={getOfferRandom()} />
+              <PlaceCard offer={getOfferRandom()} />
+              <PlaceCard offer={getOfferRandom()} /> */}
             </div>
           </section>
         </div>
       </main>
-    </div>
+    </Layout>
   );
 }

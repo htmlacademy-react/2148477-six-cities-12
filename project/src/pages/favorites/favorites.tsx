@@ -1,12 +1,10 @@
-import PlaceCard from '../../components/place-card/place-card';
-import Header from '../../components/header/header';
-import Footer from '../../components/footer/footer';
+// import PlaceCard from '../../components/place-card/place-card';
+import Layout from '../../components/layout/layout';
+// import { getOfferById } from '../../mocks/offers';
 
 export default function Favorites(): JSX.Element {
   return (
-    <div className="page">
-      <Header />
-
+    <Layout isFooter isHeaderNav>
       <main className="page__main page__main--favorites">
         <div className="page__favorites-container container">
           <section className="favorites">
@@ -22,8 +20,8 @@ export default function Favorites(): JSX.Element {
                 </div>
                 <div className="favorites__places">
                   {/* TODO заменить классы на favorite */}
-                  <PlaceCard />
-                  <PlaceCard />
+                  {/* <PlaceCard offer={getOfferRandom()} />
+                  <PlaceCard offer={getOfferRandom()} /> */}
                 </div>
               </li>
 
@@ -37,15 +35,13 @@ export default function Favorites(): JSX.Element {
                 </div>
                 <div className="favorites__places">
                   {/* TODO заменить классы на favorite */}
-                  <PlaceCard />
+                  {/* <PlaceCard offer={getOfferRandom()} /> */}
                 </div>
               </li>
             </ul>
           </section>
         </div>
       </main>
-
-      <Footer />
-    </div>
+    </Layout>
   );
 }
